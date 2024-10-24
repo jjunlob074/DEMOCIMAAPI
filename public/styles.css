@@ -124,4 +124,5 @@ button:hover {
 
 .sugerencias p:hover {
     background-color: var(--fondo-sugerencias-hover);
+    cursor:pointer;
 }
