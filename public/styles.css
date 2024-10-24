@@ -1,0 +1,127 @@
+:root {
+    --fondo-principal: #e8f5e9;
+    --texto-principal: #333;
+    --boton-activo: #4caf50;
+    --boton-hover: #45a049;
+    --borde-general: #ddd;
+    --texto-titulos: #388e3c;
+    --fondo-sugerencias: #f1f8e9;
+    --fondo-sugerencias-hover: #c8e6c9;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    transition: background-color var(--transition-speed) ease;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    display: block;
+    outline-color: var(--boton-activo);
+}
+
+button {
+    background-color: var(--boton-activo);
+    color: white;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+button:hover {
+    background-color: var(--boton-hover);
+    transform: scale(1.05); /* Ligeramente más grande al pasar el mouse */
+}
+
+.medicamento {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 1px solid var(--borde-general);
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+.medicamento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.medicamento h2 {
+    color: var(--texto-titulos);
+    transition: color var(--transition-speed) ease;
+}
+.medicamento a {
+    color: white;
+    font-weight:bold;
+}
+.medicamento p {
+    margin: 5px 0;
+    line-height: 1.6;
+    transition: transform var(--transition-speed) ease;
+}
+
+.medicamento p:hover {
+    transform: scale(1.02); /* Ligeramente más grande al pasar el mouse sobre el párrafo */
+}
+
+.botones-contenedor {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.medicamento a {
+    padding: 8px 12px;
+    background-color: var(--boton-activo);
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.medicamento a:hover {
+    background-color: var(--boton-hover);
+    transform: translateY(-2px); /* Elevación al pasar el mouse */
+}
+
+.medicamento img {
+    width: auto;
+    height: auto;
+    min-width: 200px;
+    min-height: 150px;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform var(--transition-speed) ease;
+    margin: 20px;
+}
+
+.medicamento img:hover {
+    transform: scale(1.1); /* Imagen más grande al pasar el mouse */
+}
+
+.sugerencias p {
+    background-color: var(--fondo-sugerencias);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.sugerencias p:hover {
+    background-color: var(--fondo-sugerencias-hover);
+}
